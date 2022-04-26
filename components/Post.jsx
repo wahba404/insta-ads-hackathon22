@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { TrendingItems } from '@algolia/recommend-react';
 import recommend from '@algolia/recommend';
+import Carousel from 'react-instagram-carousel';
+import { fetchTrending } from './fetchTrending';
 
 const recommendClient = recommend('U9UXVSI686', 'cbc7cd442bf8785de1a6620085bdcffd');
 const indexName = 'prod_ECOM';
 
+const images = [
+    './assets/icons/add.svg',
+    './assets/icons/comment.svg',
+    './assets/icons/reels.svg'
+  ];
+
 function TrendingItem({ item }) {
+
     return (
         <div class="post__media">
             <img src={item.image_urls[0]} alt="Post" />
@@ -61,14 +70,18 @@ export function Post(props) {
         
             <div class="post__content">
                 <div class="post__medias" id="trendingItems">
-                <TrendingItems
+                <div style={{width: '800px', height: '500px'}}>
+                    <Carousel images={images} />
+                </div>
+                {/* <TrendingItems
                     recommendClient={recommendClient}
                     indexName={indexName}
                     itemComponent={TrendingItem}
                     facetName="hierarchical_categories.lvl1"
                     facetValue={userProfile.facetValue}
-                />
-                </div>
+                /> */}
+                </div> 
+                
             </div>
         
             <div class="post__footer">

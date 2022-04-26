@@ -22,6 +22,7 @@
     "@algolia/recommend-js": "^1.3.0",
     "@babel/preset-react": "^7.16.7",
     "@babel/runtime": "^7.17.9",
+    "@parcel/transformer-image": "^2.5.0",
     "parcel": "^2.5.0",
     "preact": "^10.7.1",
     "preact-jsx-runtime": "^1.2.0"

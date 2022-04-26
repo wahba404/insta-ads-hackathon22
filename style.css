@@ -888,3 +888,7 @@ img {
 .auc-Recommend-list {
   list-style-type: none;
 }
+
+.auc-Recommend-title {
+  display: none;
+}

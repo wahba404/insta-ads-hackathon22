@@ -12,27 +12,32 @@ const UserProfiles = [
     {
         userName: "Kathy",
         facetValue: "Women > Clothing",
-        userPref: "30 year old who likes dresses"
+        userPref: "30 year old who likes dresses",
+        img: "https://avatars.slack-edge.com/2022-03-15/3244110311795_3e411492c35fc5bd8658_512.jpg"
     },
     {
         userName: "Michael",
         facetValue: "Men > Shoes",
-        userPref: "23 years old who likes shoes"
+        userPref: "23 years old who likes shoes",
+        img: "https://avatars.slack-edge.com/2022-03-30/3321378903956_908e111e2c46f403b2fe_512.jpg"
     },
     {
-        userName: "Bethy",
+        userName: "Lana",
         facetValue: "Women > Bags",
-        userPref: "25 year old who likes handbags"
+        userPref: "25 year old who likes handbags",
+        img: "https://avatars.slack-edge.com/2022-03-29/3334710624016_0ab4f08030290c0a0531_512.jpg"
     },
     {
-        userName: "Ben",
+        userName: "Steven",
         facetValue: "Men > Clothing",
-        userPref: "46 years old who likes t-shirts"
+        userPref: "26 years old who likes t-shirts",
+        img: "https://avatars.slack-edge.com/2022-03-28/3306158441187_e2f82e4e48750c1966f0_512.jpg"
     },
     {
-        userName: "Dee",
+        userName: "Rishi",
         facetValue: "Accessories > Women",
-        userPref: "lady interested in accessories"
+        userPref: "lady interested in accessories",
+        img: "https://avatars.slack-edge.com/2022-04-25/3460616229632_a650b04d939d8bf1b8f8_512.png"
     }
 ];
 const searchClient = algoliasearch('FKTCE4OWRR', '65728dc21a9c29b6711e48ebc5ea8685');
@@ -308,7 +313,7 @@ export function App() {
                                 return (
                                     <div class="side-menu__suggestion">
                                         <a href="#" class="side-menu__suggestion-avatar">
-                                        <img src="assets/default-user.png" alt="User Picture" />
+                                        <img src={userProfile.img} alt="User Picture" />
                                         </a>
                                         <div class="side-menu__suggestion-info">
                                         <a id="profile-select-1" href="#">{userProfile.userName}</a>

@@ -156,7 +156,7 @@ export function Post({userProfile}) {
                 <div class="post__infos">
                 <div class="post__likes">
                     <a href="#" class="post__likes-avatar">
-                    <img src="assets/default-user.png" alt="User Picture" />
+                    <img src="https://flagship-ui-template.netlify.app/static/icons/apple-touch-icon.png" alt="User Picture" />
                     </a>
         
                     <span

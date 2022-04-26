@@ -11,11 +11,28 @@ import { Post } from "./components/Post";
 const UserProfiles = [
     {
         userName: "Kathy",
-        facetValue: "Women > Clothing"
+        facetValue: "Women > Clothing",
+        userPref: "30 year old who likes dresses"
     },
     {
         userName: "Michael",
-        facetValue: "Men > Shoes"
+        facetValue: "Men > Shoes",
+        userPref: "23 years old who likes shoes"
+    },
+    {
+        userName: "Bethy",
+        facetValue: "Women > Bags",
+        userPref: "25 year old who likes handbags"
+    },
+    {
+        userName: "Ben",
+        facetValue: "Men > Clothing",
+        userPref: "46 years old who likes t-shirts"
+    },
+    {
+        userName: "Dee",
+        facetValue: "Accessories > Women",
+        userPref: "lady interested in accessories"
     }
 ];
 const searchClient = algoliasearch('FKTCE4OWRR', '65728dc21a9c29b6711e48ebc5ea8685');
@@ -263,22 +280,22 @@ export function App() {
                         </div>
                     </div>
 
-                    <section class="side-menu">
-                        <div class="side-menu__user-profile">
-                            <a
+                <section class="side-menu">
+                    <div class="side-menu__user-profile">
+                        <a
                             href="https://github.com/leocosta1"
                             target="_blank"
                             class="side-menu__user-avatar"
-                            >
-                            <img src="assets/default-user.png" alt="User Picture" />
-                            </a>
-                            <div class="side-menu__user-info">
+                        >
+                            <img src="https://avatars.githubusercontent.com/u/73147834?v=4" alt="User Picture" />
+                        </a>
+                        <div class="side-menu__user-info">
                             <a href="https://github.com/leocosta1" target="_blank"
-                                >leocosta1</a
+                            >leocosta1</a
                             >
                             <span>Leonardo Costa</span>
-                            </div>
-                            <button class="side-menu__user-button">Switch</button>
+                        </div>
+                        <button class="side-menu__user-button">Originator</button>
                         </div>
 
                     <div class="side-menu__suggestions-section">
@@ -295,9 +312,9 @@ export function App() {
                                         </a>
                                         <div class="side-menu__suggestion-info">
                                         <a id="profile-select-1" href="#">{userProfile.userName}</a>
-                                        <span>Followed by user1, user2 and 9 others</span>
+                                        <a href="#">{userProfile.userPref}</a>
                                         </div>
-                                        <button class="side-menu__suggestion-button" onClick={() => setUserProfile(userProfile)}>Follow</button>
+                                        <button class="side-menu__suggestion-button" onClick={() => setUserProfile(userProfile)}>Select</button>
                                     </div>
                                 )
                             })}

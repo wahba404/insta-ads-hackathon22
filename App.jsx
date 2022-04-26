@@ -11,7 +11,7 @@ const UserProfiles = [
     {
         userName: "Michael",
         facetValue: "Men > Shoes",
-        userPref: "23 years old man who likes shoes"
+        userPref: "23 years old who likes shoes"
     },
     {
         userName: "Bethy",
@@ -26,7 +26,7 @@ const UserProfiles = [
     {
         userName: "Dee",
         facetValue: "Accessories > Women",
-        userPref: "youthful lady interested in accessories"
+        userPref: "lady interested in accessories"
     }
 ];
 
@@ -525,9 +525,9 @@ export function App() {
                                         </a>
                                         <div class="side-menu__suggestion-info">
                                         <a id="profile-select-1" href="#">{userProfile.userName}</a>
-                                        <a id="profile-select-1" href="#">{userProfile.userPref}</a>
+                                        <a href="#">{userProfile.userPref}</a>
                                         </div>
-                                        <button class="side-menu__suggestion-button" onClick={() => setUserProfile(userProfile)}>Follow</button>
+                                        <button class="side-menu__suggestion-button" onClick={() => setUserProfile(userProfile)}>Select</button>
                                     </div>
                                 )
                             })}

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingItems } from '@algolia/recommend-react';
 import recommend from '@algolia/recommend';
 import Carousel from 'react-instagram-carousel';
-import { fetchTrending } from './fetchTrending';
 
 const recommendClient = recommend('U9UXVSI686', 'cbc7cd442bf8785de1a6620085bdcffd');
 const indexName = 'prod_ECOM';
@@ -13,17 +11,24 @@ const images = [
     './assets/icons/reels.svg'
   ];
 
-function TrendingItem({ item }) {
+export function Post({userProfile}) {
+    const [hits, setHits] = useState([]);
 
-    return (
-        <div class="post__media">
-            <img src={item.image_urls[0]} alt="Post" />
-        </div>
-    );
-  }
+    useEffect (() => {
+        const getTrending = async () => {
+            const response = await recommendClient.getTrendingItems([
+                {
+                    indexName,
+                    maxRecommendations: 10,
+                    facetName: 'hierarchical_categories.lvl1',
+                    facetValue: userProfile.facetValue,
+                },
+            ]);
+            setHits(response.results[0].hits);
+        };
+        getTrending();
+    }, [userProfile]);
 
-export function Post(props) {    
-    const { userProfile } = props;
     return (
         <article class="post">
             <div class="post__header">
@@ -73,15 +78,8 @@ export function Post(props) {
             <div class="post__content">
                 <div class="post__medias" id="trendingItems">
                 <div style={{width: '800px', height: '500px'}}>
-                    <Carousel images={images} />
+                    {hits.length > 0 && <Carousel images={hits.map(hit => hit.image_urls[0])} />}
                 </div>
-                {/* <TrendingItems
-                    recommendClient={recommendClient}
-                    indexName={indexName}
-                    itemComponent={TrendingItem}
-                    facetName="hierarchical_categories.lvl1"
-                    facetValue={userProfile.facetValue}
-                /> */}
                 </div> 
                 
             </div>

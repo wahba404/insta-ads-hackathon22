@@ -7,6 +7,26 @@ const posts = document.querySelectorAll('.post');
 const postsContent = document.querySelectorAll('.post__content');
 
 // ===================================
+// ALGOLIA INITIALIZATION
+// import { h } from 'preact';
+// import { trendingItems } from '@algolia/recommend-js';
+// import recommend from '@algolia/recommend';
+
+const recommendClient = recommend('U9UXVSI686', 'cbc7cd442bf8785de1a6620085bdcffd');
+const indexName = 'prod_ECOM';
+
+trendingItems({
+  container: '#trendingItems',
+  recommendClient,
+  indexName,
+  itemComponent({ item }) {
+    return (
+      item
+    );
+  },
+});
+
+// ===================================
 // DARK/LIGHT THEME
 // Set initial theme from LocalStorage
 document.onload = setInitialTheme(localStorage.getItem('theme'));

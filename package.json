@@ -1,0 +1,23 @@
+{
+  "name": "insta-ads-hackathon22",
+  "version": "1.0.0",
+  "description": "> Responsive Instagram UI Clone",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahba404/insta-ads-hackathon22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahba404/insta-ads-hackathon22/issues"
+  },
+  "homepage": "https://github.com/wahba404/insta-ads-hackathon22#readme",
+  "dependencies": {
+    "parcel": "^2.5.0"
+  }
+}

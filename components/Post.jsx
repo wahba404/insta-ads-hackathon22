@@ -34,14 +34,14 @@ export function Post({userProfile}) {
             <div class="post__header">
                 <div class="post__profile">
                 <a
-                    href="https://github.com/leocosta1"
+                    href="https://flagship-ui-template.netlify.app/"
                     target="_blank"
                     class="post__avatar"
                 >
                     <img src="https://flagship-ui-template.netlify.app/static/icons/apple-touch-icon.png" alt="User Picture" />
                 </a>
                 <a
-                    href="https://github.com/leocosta1"
+                    href="https://flagship-ui-template.netlify.app/"
                     target="_blank"
                     class="post__user"
                     >
@@ -162,13 +162,13 @@ export function Post({userProfile}) {
                 <div class="post__infos">
                 <div class="post__likes">
                     <a href="#" class="post__likes-avatar">
-                    <img src="assets/default-user.png" alt="User Picture" />
+                    <img src="https://avatars.slack-edge.com/2018-04-03/340713326613_2890719b5a8d4506f30c_512.jpg" alt="User Picture" />
                     </a>
         
                     <span
                     >Liked by
-                    <a class="post__name--underline" href="#">user123</a> and
-                    <a href="#">73 others</a></span
+                    <a class="post__name--underline" href="#"> clemfromspace</a> and
+                    <a href="#"> 207 others</a></span
                     >
                 </div>
         
@@ -176,16 +176,15 @@ export function Post({userProfile}) {
                     <span>
                     <a
                         class="post__name--underline"
-                        href="https://github.com/leocosta1"
+                        href="https://flagship-ui-template.netlify.app/"
                         target="_blank"
-                        >leocosta1</a
+                        >Spencer &amp; Willams </a
                     >
-                    Responsive clone of Instagram UI. Made with ❤ for study
-                    purposes.
+                    Shop Trending items from Spencer &amp; Willams Fashion
                     </span>
                 </div>
         
-                <span class="post__date-time">30 minutes ago</span>
+                <span class="post__date-time">45 minutes ago</span>
                 </div>
             </div>
         </article>

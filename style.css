@@ -892,3 +892,12 @@ img {
 .auc-Recommend-title {
   display: none;
 }
+
+.post__user {
+  text-transform: none;
+}
+
+.post__user span {
+  text-transform: none;
+  font-weight: normal;
+}

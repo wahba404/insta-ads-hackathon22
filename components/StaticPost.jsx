@@ -1,29 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { TrendingItems } from '@algolia/recommend-react';
-import recommend from '@algolia/recommend';
-import Carousel from 'react-instagram-carousel';
-import { fetchTrending } from './fetchTrending';
+import React from 'react';
 
-const recommendClient = recommend('U9UXVSI686', 'cbc7cd442bf8785de1a6620085bdcffd');
-const indexName = 'prod_ECOM';
-
-const images = [
-    './assets/icons/add.svg',
-    './assets/icons/comment.svg',
-    './assets/icons/reels.svg'
-  ];
-
-function TrendingItem({ item }) {
-
-    return (
-        <div class="post__media">
-            <img src={item.image_urls[0]} alt="Post" />
-        </div>
-    );
-  }
-
-export function Post(props) {    
-    const { userProfile } = props;
+export function StaticPost({ image, userImage, userName }) {
     return (
         <article class="post">
             <div class="post__header">
@@ -33,16 +10,14 @@ export function Post(props) {
                     target="_blank"
                     class="post__avatar"
                 >
-                    <img src="https://flagship-ui-template.netlify.app/static/icons/apple-touch-icon.png" alt="User Picture" />
+                    <img src={userImage} alt="User Picture" />
                 </a>
                 <a
                     href="https://github.com/leocosta1"
                     target="_blank"
                     class="post__user"
-                    >
-                        Spencer &amp; Willams<br/>
-                        <span>Sponsored</span>
-                    </a>
+                    >{userName}</a
+                >
                 </div>
         
                 <button class="post__more-options">
@@ -71,19 +46,13 @@ export function Post(props) {
             </div>
         
             <div class="post__content">
-                <div class="post__medias" id="trendingItems">
-                <div style={{width: '800px', height: '500px'}}>
-                    <Carousel images={images} />
+                <div class="post__medias">
+                <img
+                    class="post__media"
+                    src={image}
+                    alt="Post Content"
+                />
                 </div>
-                {/* <TrendingItems
-                    recommendClient={recommendClient}
-                    indexName={indexName}
-                    itemComponent={TrendingItem}
-                    facetName="hierarchical_categories.lvl1"
-                    facetValue={userProfile.facetValue}
-                /> */}
-                </div> 
-                
             </div>
         
             <div class="post__footer">
@@ -164,12 +133,12 @@ export function Post(props) {
                 <div class="post__infos">
                 <div class="post__likes">
                     <a href="#" class="post__likes-avatar">
-                    <img src="assets/default-user.png" alt="User Picture" />
+                    <img src="https://avatars.slack-edge.com/2018-04-03/340713326613_2890719b5a8d4506f30c_512.jpg" alt="User Picture" />
                     </a>
         
                     <span
                     >Liked by
-                    <a class="post__name--underline" href="#">user123</a> and
+                    <a class="post__name--underline" href="#">clemfromspace</a> and
                     <a href="#">73 others</a></span
                     >
                 </div>

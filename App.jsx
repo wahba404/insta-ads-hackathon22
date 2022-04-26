@@ -8,7 +8,7 @@ import algoliasearch from 'algoliasearch/lite';
 
 import { Post } from "./components/Post";
 import { StaticPost } from "./components/StaticPost";
-import selfie from "./selfie.jpg";
+import selfie from "./selfie.jpeg";
 import other from "./other.jpeg";
 
 const UserProfiles = [

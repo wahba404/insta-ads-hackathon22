@@ -24,14 +24,16 @@ export function Post(props) {
                     target="_blank"
                     class="post__avatar"
                 >
-                    <img src="assets/default-user.png" alt="User Picture" />
+                    <img src="https://flagship-ui-template.netlify.app/static/icons/apple-touch-icon.png" alt="User Picture" />
                 </a>
                 <a
                     href="https://github.com/leocosta1"
                     target="_blank"
                     class="post__user"
-                    >leocosta1</a
-                >
+                    >
+                        Spencer &amp; Willams<br/>
+                        <span>Sponsored</span>
+                    </a>
                 </div>
         
                 <button class="post__more-options">

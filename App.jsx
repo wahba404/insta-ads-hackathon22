@@ -7,6 +7,7 @@ import {
 import algoliasearch from 'algoliasearch/lite';
 
 import { Post } from "./components/Post";
+import selfie from "./selfie.jpg";
 
 const UserProfiles = [
     {
@@ -126,13 +127,13 @@ export function App() {
                                     target="_blank"
                                     class="post__avatar"
                                 >
-                                    <img src="assets/default-user.png" alt="User Picture" />
+                                    <img src="https://avatars.slack-edge.com/2021-09-14/2483267929702_b6e36f9b99fae6f33d0b_512.jpg" alt="User Picture" />
                                 </a>
                                 <a
                                     href="https://github.com/leocosta1"
                                     target="_blank"
                                     class="post__user"
-                                    >leocosta1</a
+                                    >theeunicelee</a
                                 >
                                 </div>
                         
@@ -165,7 +166,7 @@ export function App() {
                                 <div class="post__medias">
                                 <img
                                     class="post__media"
-                                    src="./selfie.jpg"
+                                    src={selfie}
                                     alt="Post Content"
                                 />
                                 </div>
@@ -249,12 +250,12 @@ export function App() {
                                 <div class="post__infos">
                                 <div class="post__likes">
                                     <a href="#" class="post__likes-avatar">
-                                    <img src="assets/default-user.png" alt="User Picture" />
+                                    <img src="https://avatars.slack-edge.com/2018-04-03/340713326613_2890719b5a8d4506f30c_512.jpg" alt="User Picture" />
                                     </a>
                         
                                     <span
                                     >Liked by
-                                    <a class="post__name--underline" href="#">user123</a> and
+                                    <a class="post__name--underline" href="#">clemfromspace</a> and
                                     <a href="#">73 others</a></span
                                     >
                                 </div>

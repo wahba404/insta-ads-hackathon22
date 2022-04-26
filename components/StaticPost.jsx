@@ -138,8 +138,8 @@ export function StaticPost({ image, userImage, userName }) {
         
                     <span
                     >Liked by
-                    <a class="post__name--underline" href="#">clemfromspace</a> and
-                    <a href="#">73 others</a></span
+                    <a class="post__name--underline" href="#"> clemfromspace</a> and
+                    <a href="#"> 73 others</a></span
                     >
                 </div>
         
@@ -149,10 +149,9 @@ export function StaticPost({ image, userImage, userName }) {
                         class="post__name--underline"
                         href="https://github.com/leocosta1"
                         target="_blank"
-                        >leocosta1</a
+                        >{userName} </a
                     >
-                    Responsive clone of Instagram UI. Made with ❤ for study
-                    purposes.
+                    IG Dynamic Ads team happily hacking and brainstorming away
                     </span>
                 </div>
         

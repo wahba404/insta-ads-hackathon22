@@ -8,9 +8,9 @@ const postsContent = document.querySelectorAll('.post__content');
 
 // ===================================
 // ALGOLIA INITIALIZATION
-// import { h } from 'preact';
-// import { trendingItems } from '@algolia/recommend-js';
-// import recommend from '@algolia/recommend';
+import { h } from 'preact';
+import { trendingItems } from '@algolia/recommend-js';
+import recommend from '@algolia/recommend';
 
 const recommendClient = recommend('U9UXVSI686', 'cbc7cd442bf8785de1a6620085bdcffd');
 const indexName = 'prod_ECOM';

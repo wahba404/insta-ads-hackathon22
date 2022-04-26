@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@algolia/recommend-js"></script>
-    <script>
-      const { frequentlyBoughtTogether, relatedProducts, trendingItems, trendingFacets } = window['@algolia/recommend-js'];
-    </script>
+    <script src="script.js" type="module"></script>
   </head>
 
   <body>
@@ -261,7 +257,9 @@
 
     <main class="main-container">
       <section class="content-container">
-        <div id="trendingItems"></div>
+        <div id="trendingItems">
+
+        </div>
         <div class="content">
           <div class="stories">
             <button class="stories__left-button">

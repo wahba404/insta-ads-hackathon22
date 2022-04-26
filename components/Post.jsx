@@ -5,12 +5,6 @@ import Carousel from 'react-instagram-carousel';
 const recommendClient = recommend('U9UXVSI686', 'cbc7cd442bf8785de1a6620085bdcffd');
 const indexName = 'prod_ECOM';
 
-const images = [
-    './assets/icons/add.svg',
-    './assets/icons/comment.svg',
-    './assets/icons/reels.svg'
-  ];
-
 export function Post({userProfile}) {
     const [hits, setHits] = useState([]);
 
@@ -77,8 +71,8 @@ export function Post({userProfile}) {
         
             <div class="post__content">
                 <div class="post__medias" id="trendingItems">
-                <div style={{width: '800px', height: '500px'}}>
-                    {hits.length > 0 && <Carousel images={hits.map(hit => hit.image_urls[0])} />}
+                <div style={{width: '800px', height: '400px'}}>
+                    {hits.length > 0 && <Carousel images={hits.map(hit => hit.image_urls[0])} backgroundSize={'contain'} backgroundColor={'white'} />}
                 </div>
                 </div> 
                 
@@ -162,7 +156,7 @@ export function Post({userProfile}) {
                 <div class="post__infos">
                 <div class="post__likes">
                     <a href="#" class="post__likes-avatar">
-                    <img src="https://avatars.slack-edge.com/2018-04-03/340713326613_2890719b5a8d4506f30c_512.jpg" alt="User Picture" />
+                    <img src="https://flagship-ui-template.netlify.app/static/icons/apple-touch-icon.png" alt="User Picture" />
                     </a>
         
                     <span

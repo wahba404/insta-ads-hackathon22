@@ -8,7 +8,7 @@ import algoliasearch from 'algoliasearch/lite';
 
 import { Post } from "./components/Post";
 import { StaticPost } from "./components/StaticPost";
-import selfie from "./selfie.jpg";
+import selfie from "./selfie.jpeg";
 import other from "./other.jpeg";
 
 const UserProfiles = [
@@ -33,7 +33,7 @@ const UserProfiles = [
     {
         userName: "Steven",
         facetValue: "Men > Clothing",
-        userPref: "26 years old who likes t-shirts",
+        userPref: "26 years old who likes fashionable clothing",
         img: "https://avatars.slack-edge.com/2022-03-28/3306158441187_e2f82e4e48750c1966f0_512.jpg"
     },
     {
@@ -133,7 +133,7 @@ export function App() {
                             />
                             <Post userProfile={userProfile} />
                             <StaticPost
-                                userName="lochanger"
+                                userName="lochenger"
                                 userImage="https://avatars.slack-edge.com/2020-07-23/1252017127158_0c6a2d4b1bcc2b6b64fa_512.jpg"
                                 image={other}
                             />

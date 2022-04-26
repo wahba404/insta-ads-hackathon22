@@ -11,7 +11,10 @@ export function fetchTrending () {
         // POST request using fetch with async/await
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json',
+                        'X-Algolia-Application-ID': 'U9UXVSI686',
+                        'X-Algolia-Api-Key': 'cbc7cd442bf8785de1a6620085bdcffd'           
+        },
             body: JSON.stringify({
                 "requests": [
                     { "indexName": "prod_ECOM",

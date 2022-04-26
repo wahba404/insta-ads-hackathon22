@@ -884,3 +884,7 @@ img {
     display: flex;
   }
 }
+
+.auc-Recommend-list {
+  list-style-type: none;
+}

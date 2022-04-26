@@ -27,7 +27,7 @@ const UserProfiles = [
     {
         userName: "Lana",
         facetValue: "Women > Bags",
-        userPref: "25 year old who likes handbags",
+        userPref: "25 year old who likes bags",
         img: "https://avatars.slack-edge.com/2022-03-29/3334710624016_0ab4f08030290c0a0531_512.jpg"
     },
     {
@@ -150,9 +150,7 @@ export function App() {
                             <img src="https://avatars.githubusercontent.com/u/73147834?v=4" alt="User Picture" />
                         </a>
                         <div class="side-menu__user-info">
-                            <a href="https://github.com/leocosta1" target="_blank"
-                            >leocosta1</a
-                            >
+                            <a href="https://github.com/leocosta1" target="_blank">leocosta1</a>
                             <span>Leonardo Costa</span>
                         </div>
                         <button class="side-menu__user-button">Originator</button>

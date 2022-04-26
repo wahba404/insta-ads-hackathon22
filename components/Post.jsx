@@ -14,6 +14,7 @@ function TrendingItem({ item }) {
   }
 
 export function Post(props) {    
+    const { userProfile } = props;
     return (
         <article class="post">
             <div class="post__header">
@@ -64,6 +65,8 @@ export function Post(props) {
                     recommendClient={recommendClient}
                     indexName={indexName}
                     itemComponent={TrendingItem}
+                    facetName="hierarchical_categories.lvl1"
+                    facetValue={userProfile.facetValue}
                 />
                 </div>
             </div>

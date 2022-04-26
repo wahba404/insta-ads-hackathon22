@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Post } from "./components/Post";
 
+const UserProfiles = [
+    {
+        userName: "Kathy",
+        facetValue: "Women > Clothing"
+    },
+    {
+        userName: "Michael",
+        facetValue: "Men > Shoes"
+    }
+];
+
 export function App() {
+    const [userProfile, setUserProfile] = useState({
+        facetValue: "Women > Clothing"
+    });
+
     return (
         <>
             <main class="main-container">
@@ -457,27 +472,27 @@ export function App() {
                                 </div>
                             </div>
                             </article>
-                            <Post />
+                            <Post userProfile={userProfile} />
                         </div>
                     </div>
 
                     <section class="side-menu">
-                    <div class="side-menu__user-profile">
-                        <a
-                        href="https://github.com/leocosta1"
-                        target="_blank"
-                        class="side-menu__user-avatar"
-                        >
-                        <img src="assets/default-user.png" alt="User Picture" />
-                        </a>
-                        <div class="side-menu__user-info">
-                        <a href="https://github.com/leocosta1" target="_blank"
-                            >leocosta1</a
-                        >
-                        <span>Leonardo Costa</span>
+                        <div class="side-menu__user-profile">
+                            <a
+                            href="https://github.com/leocosta1"
+                            target="_blank"
+                            class="side-menu__user-avatar"
+                            >
+                            <img src="assets/default-user.png" alt="User Picture" />
+                            </a>
+                            <div class="side-menu__user-info">
+                            <a href="https://github.com/leocosta1" target="_blank"
+                                >leocosta1</a
+                            >
+                            <span>Leonardo Costa</span>
+                            </div>
+                            <button class="side-menu__user-button">Switch</button>
                         </div>
-                        <button class="side-menu__user-button">Switch</button>
-                    </div>
 
                     <div class="side-menu__suggestions-section">
                         <div class="side-menu__suggestions-header">
@@ -485,56 +500,20 @@ export function App() {
                         <button>See All</button>
                         </div>
                         <div class="side-menu__suggestions-content">
-                        <div class="side-menu__suggestion">
-                            <a href="#" class="side-menu__suggestion-avatar">
-                            <img src="assets/default-user.png" alt="User Picture" />
-                            </a>
-                            <div class="side-menu__suggestion-info">
-                            <a id="profile-select-1" href="#">usernick16</a>
-                            <span>Followed by user1, user2 and 9 others</span>
-                            </div>
-                            <button class="side-menu__suggestion-button">Follow</button>
-                        </div>
-                        <div class="side-menu__suggestion">
-                            <a href="#" class="side-menu__suggestion-avatar">
-                            <img src="assets/default-user.png" alt="User Picture" />
-                            </a>
-                            <div class="side-menu__suggestion-info">
-                            <a id="profile-select-2" href="#">usernick17</a>
-                            <span>Followed by user1, user2 and 3 others</span>
-                            </div>
-                            <button class="side-menu__suggestion-button">Follow</button>
-                        </div>
-                        <div class="side-menu__suggestion">
-                            <a href="#" class="side-menu__suggestion-avatar">
-                            <img src="assets/default-user.png" alt="User Picture" />
-                            </a>
-                            <div class="side-menu__suggestion-info">
-                            <a id="profile-select-3" href="#">usernick18</a>
-                            <span>Followed by user1 and 9 others</span>
-                            </div>
-                            <button class="side-menu__suggestion-button">Follow</button>
-                        </div>
-                        <div class="side-menu__suggestion">
-                            <a href="#" class="side-menu__suggestion-avatar">
-                            <img src="assets/default-user.png" alt="User Picture" />
-                            </a>
-                            <div class="side-menu__suggestion-info">
-                            <a id="profile-select-4" href="#">usernick19</a>
-                            <span>Followed by user1 and 3 others</span>
-                            </div>
-                            <button class="side-menu__suggestion-button">Follow</button>
-                        </div>
-                        <div class="side-menu__suggestion">
-                            <a href="#" class="side-menu__suggestion-avatar">
-                            <img src="assets/default-user.png" alt="User Picture" />
-                            </a>
-                            <div class="side-menu__suggestion-info">
-                            <a id="profile-select-5" href="#">usernick20</a>
-                            <span>Followed by user1 and 6 others</span>
-                            </div>
-                            <button class="side-menu__suggestion-button">Follow</button>
-                        </div>
+                            {UserProfiles.map(userProfile => {
+                                return (
+                                    <div class="side-menu__suggestion">
+                                        <a href="#" class="side-menu__suggestion-avatar">
+                                        <img src="assets/default-user.png" alt="User Picture" />
+                                        </a>
+                                        <div class="side-menu__suggestion-info">
+                                        <a id="profile-select-1" href="#">{userProfile.userName}</a>
+                                        <span>Followed by user1, user2 and 9 others</span>
+                                        </div>
+                                        <button class="side-menu__suggestion-button" onClick={() => setUserProfile(userProfile)}>Follow</button>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
 

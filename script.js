@@ -21,7 +21,12 @@ trendingItems({
   indexName,
   itemComponent({ item }) {
     return (
-      item
+      <div className="trending-item">
+        <a href={item.url}>
+          <img src={item.image_urls[0]} alt={item.name} />
+          <div className="trending-item__title">{item.name}</div>
+        </a>
+      </div>
     );
   },
 });

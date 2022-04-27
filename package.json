@@ -2,10 +2,10 @@
   "name": "insta-ads-hackathon22",
   "version": "1.0.0",
   "description": "> Responsive Instagram UI Clone",
-  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",

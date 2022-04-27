@@ -15,7 +15,7 @@ const UserProfiles = [
     {
         userName: "Kathy",
         facetValue: "Women > Clothing",
-        userPref: "30 year old who likes dresses",
+        userPref: "30 year old who likes women's fashion",
         img: "https://avatars.slack-edge.com/2022-03-15/3244110311795_3e411492c35fc5bd8658_512.jpg"
     },
     {
@@ -33,7 +33,7 @@ const UserProfiles = [
     {
         userName: "Steven",
         facetValue: "Men > Clothing",
-        userPref: "26 years old who likes fashionable clothing",
+        userPref: "26 years old who likes men's fashion",
         img: "https://avatars.slack-edge.com/2022-03-28/3306158441187_e2f82e4e48750c1966f0_512.jpg"
     },
     {

@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import {
-    InstantSearch,
-    Configure,
-    connectHits,
-  } from 'react-instantsearch-dom';
+import { connectHits } from 'react-instantsearch-dom';
 import algoliasearch from 'algoliasearch/lite';
 
 import { Post } from "./components/Post";
 import { StaticPost } from "./components/StaticPost";
-import selfie from "./selfie.jpeg";
-import other from "./other.jpeg";
+import firstPost from "./assets/post_1.jpeg";
+import secondPost from "./assets/post_2.jpeg";
 
 const UserProfiles = [
     {
@@ -43,53 +39,6 @@ const UserProfiles = [
         img: "https://avatars.slack-edge.com/2022-04-25/3460616229632_a650b04d939d8bf1b8f8_512.png"
     }
 ];
-const searchClient = algoliasearch('FKTCE4OWRR', '65728dc21a9c29b6711e48ebc5ea8685');
-
-const Hits = ({hits}) => {
-    return (
-        <>
-            {hits.map(hit => {
-                if (!hit.slack.id) return null;
-                return (
-                    <button class="story story--has-story">
-                        <div class="story__avatar">
-                        <div class="story__border">
-                            <svg
-                            width="64"
-                            height="64"
-                            xmlns="http://www.w3.org/2000/svg"
-                            >
-                            <circle r="31" cy="32" cx="32" />
-                            <defs>
-                                <linearGradient
-                                y2="0"
-                                x2="1"
-                                y1="1"
-                                x1="0"
-                                id="--story-gradient"
-                                >
-                                <stop offset="0" stop-color="#f09433" />
-                                <stop offset="0.25" stop-color="#e6683c" />
-                                <stop offset="0.5" stop-color="#dc2743" />
-                                <stop offset="0.75" stop-color="#cc2366" />
-                                <stop offset="1" stop-color="#bc1888" />
-                                </linearGradient>
-                            </defs>
-                            </svg>
-                        </div>
-                        <div class="story__picture">
-                            <img src={hit.slack.image} alt="User Picture" />
-                        </div>
-                        </div>
-                        <span class="story__user">{hit.displayName}</span>
-                    </button>
-                );
-            })}
-        </>
-    )
-};
-
-const ConnectedHits = connectHits(Hits);
 
 export function App() {
     const [userProfile, setUserProfile] = useState({
@@ -101,41 +50,17 @@ export function App() {
             <main class="main-container">
                 <section class="content-container">
                     <div class="content">
-                        <div class="stories">
-                            <button class="stories__left-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                fill="#fff"
-                                d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
-                                ></path>
-                            </svg>
-                            </button>
-                            <div class="stories__content">
-                                <InstantSearch indexName="bamboohr" searchClient={searchClient}>
-                                    <Configure hitsPerPage={100} />
-                                    <ConnectedHits />
-                                </InstantSearch>
-                            </div>
-                            <button class="stories__right-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                fill="#fff"
-                                d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
-                                ></path>
-                            </svg>
-                            </button>
-                        </div>
                         <div class="posts">
                             <StaticPost
                                 userName="theeunicelee"
                                 userImage="https://avatars.slack-edge.com/2021-09-14/2483267929702_b6e36f9b99fae6f33d0b_512.jpg"
-                                image={selfie}
+                                image={firstPost}
                             />
                             <Post userProfile={userProfile} />
                             <StaticPost
                                 userName="lochenger"
                                 userImage="https://avatars.slack-edge.com/2020-07-23/1252017127158_0c6a2d4b1bcc2b6b64fa_512.jpg"
-                                image={other}
+                                image={secondPost}
                             />
                         </div>
                     </div>
